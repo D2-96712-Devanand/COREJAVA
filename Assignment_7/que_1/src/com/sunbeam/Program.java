@@ -1,0 +1,44 @@
+package com.sunbeam;
+
+import java.util.Scanner;
+
+class ExceptionlineTooLong extends Exception
+{
+	public ExceptionlineTooLong ()
+	{
+		super("String is too long..");
+	}
+}
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Enter the string : ");
+		
+		String str = sc.nextLine();
+		
+		try
+		{
+			int strLength = str.length();
+			
+			if(strLength > 80)
+			{
+				throw new ExceptionlineTooLong();
+			}
+			else
+			{
+				System.out.println("String : " + str + " and length : " + strLength);
+			}
+
+		}
+		catch(ExceptionlineTooLong e)
+		{
+			System.out.println(e.getMessage());
+		}
+		
+	}
+
+}

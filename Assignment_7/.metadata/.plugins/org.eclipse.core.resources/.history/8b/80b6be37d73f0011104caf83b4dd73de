@@ -1,0 +1,64 @@
+package com.sunbeam;
+
+import java.util.Scanner;
+class InvalidDiameter extends Exception
+{
+	public InvalidDiameter()
+	{
+		super("Invalid value diameter can not be negative");
+	}
+}
+class Circle
+{
+	private double myX;
+	private double myY;
+	private double diameter;
+	
+	public Circle() {
+		
+		this.myX = 0.0;
+		this.myY = 0.0;
+		this.diameter = 100.0;
+		
+	}
+	
+	public void setmyX(double myX)
+	{
+		this.myX = myX;
+	}
+	public double getmX()
+	{
+		return this.myX;
+	}
+	
+	public void setmyY(double myY)
+	{		
+		this.myY = myY;
+	}
+	public double getmY()
+	{
+		return this.myY;
+	}
+	
+	public void setDiameter(double diameter) 
+	{
+		if(diameter < 1)
+		{
+			throw new InvalidDiameter();
+		}
+	}
+}
+public class Program {
+
+	public static void main(String[] args) throws InvalidDiameter {
+		
+		Circle c1 = new Circle();
+		
+		c1.setDiameter(-1);
+		
+		
+		
+
+	}
+
+}
