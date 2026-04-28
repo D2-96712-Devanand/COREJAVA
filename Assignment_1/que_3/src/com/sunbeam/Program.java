@@ -1,0 +1,49 @@
+package com.sunbeam;
+
+import java.util.Scanner;
+
+public class Program {
+    public static void main(String[] args) {
+    	
+        Scanner sc = new Scanner(System.in);
+        
+        int choice, quantity;
+        double totalBill = 0;
+
+        double priceDosa = 50.0;
+        double priceSamosa = 20.0;
+        double priceIdli = 30.0;
+
+        while (true) {
+            System.out.println("--- Food Menu ---");
+            System.out.println("0.Exit");
+            System.out.println("1. Dosa (₹50)");
+            System.out.println("2. Samosa (₹20)");
+            System.out.println("3. Idli (₹30)");
+            System.out.print("Select an option: ");
+            
+            choice = sc.nextInt();
+
+            System.out.print("Enter quantity: ");
+            quantity = sc.nextInt();
+
+            switch (choice) {
+            	case 0:
+            		break;
+                case 1:
+                    totalBill += priceDosa * quantity;
+                    break;
+                case 2:
+                    totalBill += priceSamosa * quantity;
+                    break;
+                case 3:
+                    totalBill += priceIdli * quantity;
+                    break;
+                default:
+                    System.out.println("Invalid choice ...");
+            }
+            System.out.println("Total Bill: ₹" + totalBill);
+        }
+
+    }
+}

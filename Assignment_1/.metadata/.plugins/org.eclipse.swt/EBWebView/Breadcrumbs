@@ -1,0 +1,58 @@
+0:01:28 Microsoft.UnloadController.ClearUnloadState
+0:01:28 Microsoft.Shutdown.TabStripModel.RunUnloadListenerBeforeClosing_false
+0:01:28 Microsoft.Shutdown.TabStripModel.InternalCloseTabsImpl_ClosedAll
+0:01:28 Microsoft.Shutdown.TabStripModel.SendDetachWebContentsNotifications
+0:01:28 Microsoft.UnloadController.ClearUnloadState
+0:01:28 Browser1 Close Tab1 at 0
+0:01:28 Tab1 WebContentsDestroyed
+0:01:28 Microsoft.UnloadController.TabStripEmpty
+0:01:28 Microsoft.UnloadController.IsUnclosableApp_IsNotWebApp
+0:01:28 Microsoft.UnloadController.HasCompletedUnloadProcessing_True
+0:01:28 Microsoft.Shutdown.OnWindowClosing
+0:01:28 Microsoft.UnloadController.IsUnclosableApp_IsNotWebApp
+0:01:28 Microsoft.UnloadController.HasCompletedUnloadProcessing_True
+0:01:28 Microsoft.Shutdown.OnWindowClosing_MaybeClearBrowsingDataOnExit
+0:01:28 Microsoft.Shutdown.OnWindowClosing_ClearBrowsingDataOnExitNotInProgress
+0:01:28 Microsoft.Shutdown.OnWindowClosingPostClearBrowsingData_NoBrowsingDataCleared
+0:01:28 Widget Closed: BrowserWidget
+0:01:28 Microsoft.UnloadController.HasCompletedUnloadProcessing_True
+0:01:28 Microsoft.Shutdown.OnWindowClosing
+0:01:28 Microsoft.Shutdown.OnWindowClosing_DeleteScheduled
+0:01:28 Microsoft.Last_Browser_Removed
+0:01:28 Microsoft.NewBrowser_Popup
+0:01:28 Microsoft.BrowserList.AddBrowser
+0:01:28 Browser2 Insert active Tab2 at 0
+0:01:28 Tab2 StartNav19 #auto_toplevel
+0:01:28 Tab2 StartNav20 #typed
+0:01:28 Tab2 FinishNav19
+0:01:28 Tab2 PageLoad
+0:01:28 Tab2 FinishNav20
+0:01:28 Tab2 PageLoad
+0:01:35 Memory Pressure: Moderate
+0:01:36 Microsoft.NewBrowser_Popup
+0:01:36 Microsoft.BrowserList.AddBrowser
+0:01:36 Browser3 Insert active Tab3 at 0
+0:01:36 Tab3 StartNav21 #auto_toplevel
+0:01:36 Tab3 FinishNav21
+0:01:36 Tab3 PageLoad
+0:01:36 Tab3 StartNav22 #typed
+0:01:36 Tab3 FinishNav22
+0:01:36 Tab3 PageLoad
+0:01:36 Tab2 StartNav23 #typed
+0:01:36 Tab2 FinishNav23
+0:01:36 Tab2 PageLoad
+0:01:37 Tab3 StartNav24 #typed
+0:01:37 Tab3 FinishNav24
+0:01:37 Tab3 PageLoad
+0:01:38 Tab2 StartNav25 #typed
+0:01:38 Tab2 FinishNav25
+0:01:38 Tab2 PageLoad
+0:01:45 Memory Pressure: Moderate
+0:01:55 Memory Pressure: Moderate
+0:02:00 Memory Pressure: None
+0:02:07 Tab2 StartNav26 #typed
+0:02:07 Tab2 FinishNav26
+0:02:07 Tab2 PageLoad
+0:02:20 Memory Pressure: Moderate
+0:02:30 Memory Pressure: Moderate
+0:02:34 Microsoft.UnloadController.IsUnclosableApp_IsNotWebApp

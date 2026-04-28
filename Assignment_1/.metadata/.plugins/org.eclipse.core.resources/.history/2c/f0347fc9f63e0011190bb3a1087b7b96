@@ -1,0 +1,29 @@
+package com.sunbeam;
+import java.util.Scanner;
+
+public class AverageCalculator {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter two double values:");
+
+        // Check if the first input is a double
+        if (!sc.hasNextDouble()) {
+            System.out.println("Error: The first argument is not a double.");
+            return; // Terminate
+        }
+        double num1 = sc.nextDouble();
+
+        // Check if the second input is a double
+        if (!sc.hasNextDouble()) {
+            System.out.println("Error: The second argument is not a double.");
+            return; // Terminate
+        }
+        double num2 = sc.nextDouble();
+
+        // Calculate and print average
+        double average = (num1 + num2) / 2;
+        System.out.println("The average is: " + average);
+
+        sc.close();
+    }
+}
