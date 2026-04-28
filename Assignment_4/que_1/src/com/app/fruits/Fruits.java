@@ -1,0 +1,20 @@
+package com.app.fruits;
+
+class Apple extends Fruit {
+    public Apple(String color, double weight) { super("Apple", color, weight); }
+    @Override
+    public String taste() { return "sweet and sour"; }
+}
+
+class Mango extends Fruit {
+    public Mango(String color, double weight) { super("Mango", color, weight); }
+    @Override
+    public String taste() { return "sweet"; }
+}
+
+class Orange extends Fruit {
+    public Orange(String color, double weight) { super("Orange", color, weight); }
+    @Override
+    public String taste() { return "sour"; }
+}
+
