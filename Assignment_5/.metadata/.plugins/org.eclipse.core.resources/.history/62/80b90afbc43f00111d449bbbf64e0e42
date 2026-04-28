@@ -1,0 +1,22 @@
+package com.sunbeam;
+
+public class Program {
+	
+    public static void main(String[] args) {
+        String text = "  Hello world, this is a Java program  ";
+
+        // 1. Remove leading and trailing whitespace
+        String trimmedText = text.trim();
+
+        // 2. Check if the string is empty after trimming
+        if (trimmedText.isEmpty()) {
+            System.out.println("Word count: 0");
+        } else {
+            // 3. Split the string by one or more spaces ("\\s+")
+            String[] words = trimmedText.split("\\s+");
+
+            // 4. Get the length of the array
+            System.out.println("Word count: " + words.length);
+        }
+    }
+}

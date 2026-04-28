@@ -1,0 +1,32 @@
+package com.sunbeam;
+
+import java.util.Scanner;
+
+public class Program {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Enter the string : ");
+		
+		String str = sc.nextLine();
+		
+		System.out.print("string : " + str);
+		
+		String trimmedString = str.trim();
+		
+		if(trimmedString.isEmpty())
+		{
+			System.out.println("Words in string are zero..");
+		}
+		else
+		{
+			String[] words = trimmedString.split(str); 
+			
+			System.out.println("Words in string are " + words.length);
+		}
+		
+	}
+
+}
