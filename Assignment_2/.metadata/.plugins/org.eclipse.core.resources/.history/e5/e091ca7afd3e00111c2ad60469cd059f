@@ -1,0 +1,19 @@
+package com.sunbeam;
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		Employee e1 = new Employee("Dev","Budhawat",100000);
+		
+		Employee e2 = new Employee("Abhi","Budhawat",120000);		
+		
+		System.out.println(e1.toString());
+		
+		System.out.println(e1.toString());
+		
+		
+
+	}
+
+}

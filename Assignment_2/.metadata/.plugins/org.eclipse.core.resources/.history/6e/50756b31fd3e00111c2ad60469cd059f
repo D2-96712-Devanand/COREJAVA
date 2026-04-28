@@ -1,0 +1,78 @@
+package com.sunbeam;
+
+public class Employee {
+	
+		private String firstName;
+		private String lastName;
+		private double salary;
+		
+		public Employee() 
+		{
+			
+		}
+
+		public Employee(String firstName, String lastName, double salary) {
+			super();
+			this.firstName = firstName;
+			this.lastName = lastName;
+			if(salary > 0.0)
+			{	
+				this.salary = salary;
+			}
+			else
+			{
+				System.out.println("Enter salary greater than 0");
+			}
+
+		}
+
+		public String getFirstName() {
+			return firstName;
+		}
+
+		public void setFirstName(String firstName) {
+			this.firstName = firstName;
+		}
+
+		public String getLastName() {
+			return lastName;
+		}
+
+		public void setLastName(String lastName) {
+			this.lastName = lastName;
+		}
+
+		public double getSalary() {
+			return salary;
+		}
+
+		public void setSalary(double salary) {
+			
+			if(salary > 0.0)
+			{
+				this.salary = salary;
+			}
+			else
+			{
+				System.out.println("Enter salary greater than 0");				
+			}
+		}
+		
+		public String toString()
+		{
+			return String.format("%s %s %0.2f",firstName,lastName,salary);
+		}
+		public double annualSalary()
+		{
+			double totalSalary = 12 * this.getSalary();
+			
+			return totalSalary;
+		}
+		
+		
+		
+		
+		
+		
+		
+}
