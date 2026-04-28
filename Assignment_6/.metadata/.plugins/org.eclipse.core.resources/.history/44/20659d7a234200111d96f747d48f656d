@@ -1,0 +1,21 @@
+package com.sunbeam;
+
+class Book {
+    String isbn;
+    double price;
+    String authorName;
+    int quantity;
+
+    public Book(String isbn, double price, String authorName, int quantity) {
+        this.isbn = isbn;
+        this.price = price;
+        this.authorName = authorName;
+        this.quantity = quantity;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("ISBN: %-10s | Price: %-8.2f | Author: %-15s | Qty: %d", 
+                isbn, price, authorName, quantity);
+    }
+}

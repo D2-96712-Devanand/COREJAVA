@@ -1,0 +1,79 @@
+0:08:05 Browser3 Insert active Tab3 at 0
+0:08:05 Tab3 StartNav26 #auto_toplevel
+0:08:05 Tab3 StartNav27 #typed
+0:08:05 Tab3 StartNav28 #typed
+0:08:05 Tab3 FinishNav26
+0:08:05 Tab3 PageLoad
+0:08:05 Tab3 FinishNav27
+0:08:05 Tab3 PageLoad
+0:08:05 Tab3 FinishNav28
+0:08:05 Tab3 PageLoad
+0:08:10 Tab3 StartNav29 #typed
+0:08:10 Tab3 FinishNav29
+0:08:10 Tab3 PageLoad
+0:08:11 Tab3 StartNav30 #typed
+0:08:11 Tab3 FinishNav30
+0:08:11 Tab3 PageLoad
+0:08:13 Tab3 StartNav31 #typed
+0:08:13 Tab3 FinishNav31
+0:08:13 Tab3 PageLoad
+0:08:16 Tab2 StartNav32 #typed
+0:08:16 Tab2 FinishNav32
+0:08:16 Tab2 PageLoad
+0:08:18 Tab2 StartNav33 #typed
+0:08:18 Tab2 FinishNav33
+0:08:18 Tab2 PageLoad
+0:08:18 Tab2 StartNav34 #typed
+0:08:18 Tab2 FinishNav34
+0:08:18 Tab2 PageLoad
+0:08:35 Memory Pressure: Moderate
+0:08:37 Tab2 StartNav35 #typed
+0:08:37 Tab2 FinishNav35
+0:08:37 Tab2 PageLoad
+0:08:37 Tab2 StartNav36 #typed
+0:08:37 Tab2 FinishNav36
+0:08:37 Tab2 PageLoad
+0:08:39 Tab2 StartNav37 #typed
+0:08:39 Tab2 FinishNav37
+0:08:39 Tab2 PageLoad
+0:08:45 Memory Pressure: None
+0:09:39 Tab2 StartNav38 #typed
+0:09:39 Tab2 FinishNav38
+0:09:39 Tab2 PageLoad
+0:09:42 Tab2 StartNav39 #typed
+0:09:42 Tab2 FinishNav39
+0:09:42 Tab2 PageLoad
+0:09:47 Tab2 StartNav40 #typed
+0:09:47 Tab2 FinishNav40
+0:09:47 Tab2 PageLoad
+0:14:51 Memory Pressure: Moderate
+0:15:01 Memory Pressure: None
+0:15:21 Memory Pressure: Moderate
+0:15:31 Memory Pressure: None
+0:18:11 Memory Pressure: Moderate
+0:18:21 Memory Pressure: Moderate
+0:18:31 Memory Pressure: Moderate
+0:18:41 Memory Pressure: Moderate
+0:18:51 Memory Pressure: Moderate
+0:19:01 Memory Pressure: Moderate
+0:19:11 Memory Pressure: Moderate
+0:19:21 Memory Pressure: Moderate
+0:19:31 Memory Pressure: Moderate
+0:19:41 Memory Pressure: Moderate
+0:19:46 Memory Pressure: None
+0:19:51 Memory Pressure: Moderate
+0:20:01 Memory Pressure: Moderate
+0:20:11 Memory Pressure: Moderate
+0:20:21 Memory Pressure: Moderate
+0:20:31 Memory Pressure: None
+0:23:37 Memory Pressure: Moderate
+0:23:42 Memory Pressure: None
+0:23:52 Memory Pressure: Moderate
+0:23:57 Memory Pressure: None
+0:24:12 Memory Pressure: Moderate
+0:26:26 Memory Pressure: Moderate
+0:26:36 Memory Pressure: Moderate
+0:26:46 Memory Pressure: Moderate
+0:26:56 Memory Pressure: Moderate
+0:27:01 Memory Pressure: None
+0:28:51 Microsoft.UnloadController.IsUnclosableApp_IsNotWebApp
