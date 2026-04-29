@@ -1,0 +1,112 @@
+package com.sunbeam;
+
+import java.util.Scanner;
+
+interface Stack {
+    int STACK_SIZE = 3; 
+    void push(Employee e);
+    Employee pop();
+}
+
+class FixedStack implements Stack {
+    private Employee[] emps = new Employee[STACK_SIZE];
+    private int top = -1;
+
+    @Override
+    public void push(Employee e) {
+        if (top == STACK_SIZE - 1) {
+            System.out.println("Error: Fixed Stack is Full!");
+        } else {
+            emps[++top] = e;
+            System.out.println("Pushed to Fixed Stack.");
+        }
+    }
+
+    @Override
+    public Employee pop() {
+        if (top == -1) {
+            System.out.println("Error: Fixed Stack is Empty!");
+            return null;
+        }
+        return emps[top--];
+    }
+}
+
+class GrowableStack implements Stack {
+    private Employee[] emps = new Employee[STACK_SIZE];
+    private int top = -1;
+
+    @Override
+    public void push(Employee e) {
+        if (top == emps.length - 1) {
+            // Double the array size
+            Employee[] temp = new Employee[emps.length * 2];
+            System.arraycopy(emps, 0, temp, 0, emps.length);
+            emps = temp;
+            System.out.println("Stack capacity increased to " + emps.length);
+        }
+        emps[++top] = e;
+        System.out.println("Pushed to Growable Stack.");
+    }
+
+    @Override
+    public Employee pop() {
+        if (top == -1) {
+            System.out.println("Error: Growable Stack is Empty!");
+            return null;
+        }
+        return emps[top--];
+    }
+}
+
+public class Program {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Stack ref = null; // Interface reference for dynamic method dispatch
+        boolean exit = false;
+
+        while (!exit) {
+            System.out.println("\n1.Fixed Stack 2.Growable Stack 3.Push 4.Pop 5.Exit");
+            System.out.print("Enter choice: ");
+            int choice = sc.nextInt();
+
+            switch (choice) {
+                case 1:
+                    if (ref == null) ref = new FixedStack();
+                    else System.out.println("Selection already made!");
+                    break;
+
+                case 2: 
+                    if (ref == null) ref = new GrowableStack();
+                    else System.out.println("Selection already made!");
+                    break;
+
+                case 3: // Push
+                    if (ref != null) {
+                        System.out.print("Enter ID, Name, Salary: ");
+                        ref.push(new Employee(sc.nextInt(), sc.next(), sc.nextDouble()));
+                    } else {
+                        System.out.println("Error: NO stack chosen !!!");
+                    }
+                    break;
+
+                case 4: 
+                    if (ref != null) {
+                        Employee e = ref.pop();
+                        if (e != null) System.out.println("Popped: " + e);
+                    } else {
+                        System.out.println("Error: NO stack chosen !!!");
+                    }
+                    break;
+
+                case 5:
+                    exit = true;
+                    break;
+
+                default:
+                    System.out.println("Invalid choice.");
+            }
+        }
+        sc.close();
+    }
+}

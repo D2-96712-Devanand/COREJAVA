@@ -1,0 +1,27 @@
+package com.sunbeam;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
+public class Program {
+	
+//	 ListOrderComparator
+	public static void main(String[] args)
+	{
+		List<String> list = new LinkedList<>();
+		
+		list.add("White");
+		list.add("Red");
+		list.add("Yellow");
+		list.add("Green");
+		list.add("Skyblue");
+		
+		System.out.print("List : ");
+		
+		for(String str : list)
+		{
+			System.out.print(str + " " );
+		}
+	}
+}

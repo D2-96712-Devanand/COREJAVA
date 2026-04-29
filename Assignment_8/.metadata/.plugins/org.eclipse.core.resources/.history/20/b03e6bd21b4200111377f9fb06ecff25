@@ -1,0 +1,35 @@
+package com.sunbeam;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
+
+public class Program {
+	
+//	class ListOrderComparator implements Comparator<list>
+//	{
+//		public int compare(String x,String y)
+//		{
+//			int diff = x.compareTo(y);
+//			
+//			return diff;
+//		}
+//
+//	}
+	public static void main(String[] args)
+	{
+		List<String> list = new ArrayList<>();
+		
+		list.add("White");
+		list.add("Red");
+		list.add("Yellow");
+		list.add("Green");
+		list.add("Skyblue");
+
+		list.sort(null);
+		
+		System.out.println("Sorted list : " + list);
+
+	}
+}
