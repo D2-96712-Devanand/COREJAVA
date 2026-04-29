@@ -1,0 +1,56 @@
+package com.sunbeam;
+
+class Course {
+    String name;
+    Course(String name) 
+    { this.name = name; }
+}
+
+class Student {
+    String studentName;
+    Course course;
+
+    Student() {
+        this.studentName = " ";
+        this.course = new Course(" ");
+    }
+
+    Student(String studentName, String courseName) {
+        this.studentName = studentName;
+        this.course = new Course(courseName);
+    }
+
+    Student(Student other, boolean shallow) {
+        this.studentName = other.studentName;
+        this.course = other.course; 
+    }
+
+    Student(Student other) {
+        this.studentName = other.studentName;
+        this.course = new Course(other.course.name);
+    }
+
+    void show() {
+        System.out.println("Student: " + studentName + " | Course: " + course.name);
+    }
+}
+
+public class Program {
+    public static void main(String[] args) {
+ 
+        Student s1 = new Student("John", "Java");
+
+
+        Student shallowCopy = new Student(s1, true);
+
+
+        Student deepCopy = new Student(s1);
+
+
+        shallowCopy.course.name = "Advanced Computing";
+
+        System.out.println("Original: "); s1.show();
+        System.out.println("Shallow: "); shallowCopy.show();  
+        System.out.println("Deep:    "); deepCopy.show();     
+    }
+}

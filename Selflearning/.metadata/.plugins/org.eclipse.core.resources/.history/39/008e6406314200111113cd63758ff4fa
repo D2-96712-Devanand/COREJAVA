@@ -1,0 +1,50 @@
+package com.sunbeam;
+
+class EcommerceException extends Exception {
+    public EcommerceException(String message) {
+        super(message);
+    }
+}
+
+class PaymentException extends EcommerceException {
+    public PaymentException(String message) { super("Payment Error: " + message); }
+}
+
+class InventoryException extends EcommerceException {
+    public InventoryException(String message) { super("Inventory Error: " + message); }
+}
+
+class ShippingException extends EcommerceException {
+    public ShippingException(String message) { super("Shipping Error: " + message); }
+}
+
+
+class OrderProcessor {
+    void processOrder(double balance, int stock, String zipCode) throws EcommerceException {
+        if (stock <= 0) 
+            throw new InventoryException("Item out of stock!");
+        
+        if (balance < 100) 
+            throw new PaymentException("Insufficient funds.");
+            
+        if (zipCode.startsWith("000")) 
+            throw new ShippingException("Area code not serviceable.");
+
+        System.out.println("Order processed successfully!");
+    }
+}
+
+public class Program {
+    public static void main(String[] args) {
+        OrderProcessor processor = new OrderProcessor();
+
+        try {
+            processor.processOrder(111.00, 5, "411057"); 
+            
+        } catch (PaymentException | InventoryException | ShippingException e) {
+            System.err.println("Specific Handle: " + e.getMessage());
+        } catch (EcommerceException e) {
+            System.err.println("General Handle: " + e.getMessage());
+        }
+    }
+}

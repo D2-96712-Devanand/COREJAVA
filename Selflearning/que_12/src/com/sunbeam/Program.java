@@ -1,0 +1,36 @@
+package com.sunbeam;
+
+import java.util.Comparator;
+import java.util.Arrays;
+
+public class Program {
+
+
+    static <T> void selectionSort(T[] arr, Comparator<T> c) {
+        for (int i = 0; i < arr.length - 1; i++) {
+
+            int minIdx = i;
+            for (int j = i + 1; j < arr.length; j++) {
+                
+                if (c.compare(arr[minIdx], arr[j]) > 0) {
+                    minIdx = j;
+                }
+            }
+
+            T temp = arr[minIdx];
+            arr[minIdx] = arr[i];
+            arr[i] = temp;
+        }
+    }
+
+    public static void main(String[] args) {
+
+        Integer[] numbers = {5, 2, 8, 1, 9};
+        selectionSort(numbers, (a, b) -> b - a);
+        System.out.println("Integers as desc order : " + Arrays.toString(numbers));
+
+        String[] fruits = {"Apple", "Kiwi", "Banana", "Pear"};
+        selectionSort(fruits, Comparator.comparingInt(String::length));
+        System.out.println("Strings by length as ascending : " + Arrays.toString(fruits));
+    }
+}

@@ -1,0 +1,30 @@
+package com.sunbeam;
+
+enum Day {
+    MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY;
+
+    public boolean isWeekend() {
+        return this == SATURDAY || this == SUNDAY;
+    }
+
+    public boolean isWeekday() {
+        return !isWeekend();
+    }
+}
+
+public class Program {
+    public static void main(String[] args) {
+
+        Day today = Day.MONDAY;
+
+        System.out.println("Day: " + today);
+        System.out.println("Is Weekend? " + today.isWeekend()); // true
+        System.out.println("Is Weekday? " + today.isWeekday()); // false
+
+        System.out.println("\nFull Week Check:");
+        for (Day d : Day.values()) {
+            String type = d.isWeeday() ? "Weekday" : "Weekend";
+            System.out.println(d + " is a " + type);
+        }
+    }
+}
