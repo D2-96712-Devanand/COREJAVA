@@ -1,0 +1,72 @@
+package com.sunbeam;
+
+import java.util.*;
+
+public class Program {
+    public static void main(String[] args) {
+        List<Student> students = new ArrayList<>();
+        Scanner sc = new Scanner(System.in);
+        int choice;
+
+        do {
+            System.out.println("1. Add Student\n"
+            		+ "2. Display All\n"
+            		+ "3. Search by Roll No\n"
+            		+ "4. Sort by Roll No\n5. Sort by Name\n"
+            		+ "6. Sort by Marks\n"
+            		+ "7. Exit");
+            System.out.print("Enter choice: ");
+            choice = sc.nextInt();
+
+            switch (choice) {
+                case 1:
+                    System.out.print("Enter Roll No: ");
+                    int r = sc.nextInt();
+                    sc.nextLine(); 
+                    System.out.print("Enter Name: ");
+                    String n = sc.nextLine();
+                    System.out.print("Enter Marks: ");
+                    double m = sc.nextDouble();
+                    students.add(new Student(r, n, m));
+                    break;
+
+                case 2:
+                    Iterator<Student> it = students.iterator();
+                    while (it.hasNext()) {
+                        System.out.println(it.next());
+                    }
+                    break;
+
+                case 3:
+                    System.out.print("Enter Roll No to search: ");
+                    int searchRoll = sc.nextInt();
+                    boolean found = false;
+                    for (Student s : students) {
+                        if (s.rollNo == searchRoll) {
+                            System.out.println("Found: " + s);
+                            found = true;
+                            break;
+                        }
+                    }
+                    if (!found) System.out.println("Student not found.");
+                    break;
+
+                case 4:
+                    students.sort(Comparator.comparingInt(s -> s.getrollNo()));
+                    System.out.println("Sorted by Roll No.");
+                    break;
+
+                case 5:
+                    students.sort(Comparator.comparing(s -> s.getName()));
+                    System.out.println("Sorted by Name.");
+                    break;
+
+                case 6:
+                    students.sort(Comparator.comparingDouble(s -> s.getMarks()));
+                    System.out.println("Sorted by Marks.");
+                    break;
+            }
+        } while (choice != 7);
+        sc.close();
+    }
+}
